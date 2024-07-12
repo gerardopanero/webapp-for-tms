@@ -1,0 +1,49 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <button mat-raised-button><mat-icon>not_interested
+        </mat-icon><Main>FUERA DE SERVICIO</Main></button>
+    </mat-expansion-panel-header>
+    <mat-selection-list>
+
+        <!-- <input type="text" [(ngModel)]="maquina" (keyup.enter)="agregarMaquina()" class="form-control form-control-lg" placeholder="Ingrese ID">        
+        <div class="col-lg-6 offset-lg-3 mt-5">
+			<div class="card" *ngIf="slotFDeS.length == 0">
+				<h5>No tenemos maquinas Fuera de Servicio...</h5>
+			</div>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between" *ngFor="let tarea of slotFDeS; let i = index">
+                    {{tarea.maquina}}
+                <span class="text-danger cursor" (click)="eliminarMaquina()">
+                    <mat-icon>closed</mat-icon>
+                </span>
+                </li>
+            </ul>
+		</div> -->
+
+        <input type="text" [(ngModel)]="maq" (keyup.enter)="agregarMaqFS(maq)" class="form-control form-control-lg" placeholder="Agregar maquinas FS">
+        <div class="col-lg-6 offset-lg-3 mt-5">
+			<div class="card" *ngIf="maqFS.length == 0">
+				<h5>No tenemos maquinas Fuera de Servicio...</h5>
+			</div>
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between" *ngFor="let maq of maqFS; let i = index">
+            {{maq}}
+            <span class="text-danger cursor" (click)="eliminarMaquina(i)">
+                <mat-icon>delete_forever</mat-icon>
+            </span>
+        </li>
+        </ul>
+
+        
+
+
+        <!-- <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="Sushi">
+            </mat-form-field>
+        </form> -->
+    </mat-selection-list>
+</mat-expansion-panel> 

@@ -1,0 +1,58 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <button mat-raised-button><mat-icon>find_in_page
+        </mat-icon>SEG. ACEPTADORES</button>
+    </mat-expansion-panel-header>
+    <mat-selection-list>
+        <div class="row mb-4">
+            <div class="col-12 col-md-4">
+                <input type="file" multiple="false" class="form-control" id="input" (change)="ReadExcel($event)">
+                <table class="table display-flex">
+                    <thead>
+                        <tr>
+                            <th>WIN CERO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of win0" >
+                            <td>{{u}}</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th>BILL CERO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of billCero" >
+                            <td>{{u}}</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th>TITO CERO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let u of titoCero" >
+                            <td>{{u}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </mat-selection-list>
+</mat-expansion-panel>
+
+
+
+
+  
+
+
+
+
+
+
+

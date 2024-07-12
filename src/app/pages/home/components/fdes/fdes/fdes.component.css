@@ -1,0 +1,21 @@
+input{
+    text-align: center;
+}
+    
+.form-control-lg{
+    font-size: 1rem;
+    border: 1px solid white;
+    
+    }
+    
+.cursor{
+    cursor: pointer;
+    }
+
+.list-group{
+    font-size: 1rem;
+    margin-left: 55px;
+    
+
+    
+}
